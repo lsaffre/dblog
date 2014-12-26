@@ -8,14 +8,14 @@ blog.
 Installation:
 
 - Make a clone of this project into some directory of your choice. For
-  example into :file:`~/myblog`.
+  example into `~/myblog`.
 
 - Install the ``atelier`` Python package:  ``$ pip install atelier``
 
 - Edit the following pages (replace at least "John Doe" by your name):
 
-  - :file:`~/myblog/docs/conf.py`
-  - :file:`~/myblog/docs/index.rst`
+  - `~/myblog/docs/conf.py`
+  - `~/myblog/docs/index.rst`
 
 - Make sure that your `EDITOR` environment variable is set.
 
