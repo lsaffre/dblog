@@ -10,11 +10,14 @@ Installation:
 - Make a clone of this project into some directory of your choice. For
   example::
 
-    $ mkdir ~/myblog
-    $ cd ~/myblog
-    $ git clone https://github.com/lsaffre/dblog.git
+    $ cd
+    $ git clone https://github.com/lsaffre/dblog.git myblog
 
-- Install the ``atelier`` Python package:  ``$ pip install atelier``
+  This will create a directory `~/myblog` with the necessary files.
+
+- Install the ``atelier`` Python package::  
+
+    $ pip install atelier
 
 - Edit the following files (replace at least "John Doe" by your name):
 
