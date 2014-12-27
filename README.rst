@@ -25,3 +25,23 @@ To start blogging::
     $ cd ~/myblog
     $ fab blog
 
+To build your docs and see them::
+
+    $ cd ~/myblog
+    $ fab bd
+    $ firefox ~/myblog/.build/index.html
+
+To publish your docs::
+
+    $ cd ~/myblog
+    $ fab pd
+
+Before this last step can work, you need to create a file
+`~/myblog/fabfile.py` with this content::
+
+  env.docs_rsync_dest = 'john@doe.org:~/public_html/%s'
+
+And then you must configure the web server at `doe.org` to serve
+`/home/john/public_html/docs` as static html.
+
+- 
