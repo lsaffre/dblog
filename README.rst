@@ -13,7 +13,13 @@ Installation:
     $ cd
     $ git clone https://github.com/lsaffre/dblog.git myblog
 
-  This will create a directory `~/myblog` with the necessary files.
+  This will create a directory `~/myblog` with all necessary files.
+
+  Note that we explicitly specified the argument "myblog" to the
+  :command:`git` command.  This is your *internal* project name. It is
+  not visible to the outside. Don't use "dblog" because one day
+  you might become maintainer of the project template itself
+  (whose internal name would then be "dblog").
 
 - Install the ``atelier`` Python package::  
 
@@ -42,7 +48,8 @@ To publish your docs::
     $ cd ~/myblog
     $ fab pd
 
-Before this last step can work:, 
+Before this last step can work, you need to configure where your blog
+is to be published.
 
 - you need an SSH account on some public server. For example
   `john@doe.org`.
@@ -56,8 +63,7 @@ Before this last step can work:,
   <http://atelier.lino-framework.org/dev/api/atelier.fablib.html#configuration-files>`_.
 
 - And then you must configure the web server at `doe.org` to serve
-  `/home/john/public_html/docs` as static html at
-  `http://www.doe.org`.
+  `/home/john/public_html/myblog_docs` to the outside.  For example if
+  you want your blog to be visible under `http://www.doe.org` you
+  point your browser's "/" location to `public_html/myblog_docs`.
 
-
-- 

@@ -4,6 +4,11 @@
 
 from atelier.sphinxconf import configure
 
+try:
+    import lino
+except ImportError:
+    lino = None
+
 extlinks = {}
 extensions = []
 
@@ -11,11 +16,12 @@ configure(globals())
 
 language = 'en'
 
-extensions += ['sphinxcontrib.taglist']
 extensions += ['atelier.sphinxconf.blog']
 extensions += ['atelier.sphinxconf.complex_tables']
-extensions += ['lino.sphinxcontrib.logo']
-extensions += ['lino.sphinxcontrib.actordoc']
+
+if lino:
+    extensions += ['lino.sphinxcontrib.logo']
+    extensions += ['lino.sphinxcontrib.actordoc']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['.templates']
@@ -64,8 +70,6 @@ html_title = u"John's developer blog"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#~ html_logo = 'logo.jpg'
-# html_logo = 'lino-logo-2.png'
 html_logo = 'logo.png'
 
 # The name of an image file (within the static path) to use as favicon of the
@@ -84,9 +88,9 @@ html_sidebars = {
 }
 
 
-import lino
-extlinks.update(srcref=(lino.srcref_url, ''))
-extlinks.update(ticket=('http://trac.lino-framework.org/ticket/%s', '#'))
+if lino:
+    extlinks.update(srcref=(lino.srcref_url, ''))
+    extlinks.update(ticket=('http://trac.lino-framework.org/ticket/%s', '#'))
 
 autosummary_generate = True
 
