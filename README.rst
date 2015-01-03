@@ -10,16 +10,18 @@ Installation:
 - Make a clone of this project into some directory of your choice. For
   example::
 
-    $ cd
-    $ git clone https://github.com/lsaffre/dblog.git myblog
+    $ cd ~/projects
+    $ git clone https://github.com/lsaffre/dblog.git blog
 
-  This will create a directory `~/myblog` with all necessary files.
+  This will create a directory `~/projects/blog` with all necessary
+  files.
 
-  Note that we explicitly specified the argument "myblog" to the
-  :command:`git` command.  This is your *internal* project name. It is
-  not visible to the outside. Don't use "dblog" because one day
-  you might become maintainer of the project template itself
-  (whose internal name would then be "dblog").
+  Note that we explicitly specified the argument "blog" to the
+  :command:`git` command.  This is your *internal project name*. It is
+  not visible to the outside. Don't use "dblog" because one day you
+  might become maintainer of the project template itself (whose
+  internal name would then be "dblog").  See also `Project management
+  using atelier <http://lino-framework.org/team/projects.html>`_.
 
 - Install the ``atelier`` Python package::  
 
@@ -27,25 +29,25 @@ Installation:
 
 - Edit the following files (replace at least "John Doe" by your name):
 
-  - `~/myblog/docs/conf.py`
-  - `~/myblog/docs/index.rst`
+  - `~/projects/blog/docs/conf.py`
+  - `~/projects/blog/docs/index.rst`
 
 - Make sure that your `VISUAL` or `EDITOR` environment variable is set.
 
 To start blogging::
 
-    $ cd ~/myblog
+    $ cd ~/projects/blog
     $ fab blog
 
 To build your docs and see them::
 
-    $ cd ~/myblog
+    $ cd ~/projects/blog
     $ fab bd
     $ firefox ~/myblog/.build/index.html
 
 To publish your docs::
 
-    $ cd ~/myblog
+    $ cd ~/projects/blog
     $ fab pd
 
 Before this last step can work, you need to configure where your blog
