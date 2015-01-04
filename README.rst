@@ -56,7 +56,7 @@ is to be published.
 - you need an SSH account on some public server. For example
   `john@doe.org`.
 
-- Create a file `~/projects/blog/fabfile.py` with this content::
+- Modify the file `~/projects/blog/fabfile.py`, adding this content::
 
     env.docs_rsync_dest = 'john@doe.org:~/public_html/%s'
     env.blogref_url = "http://www.doe.org"
