@@ -19,7 +19,7 @@ language = 'en'
 extensions += ['atelier.sphinxconf.blog']
 extensions += ['atelier.sphinxconf.complex_tables']
 
-if lino:
+if False:
     extensions += ['lino.sphinxcontrib.logo']
     extensions += ['lino.sphinxcontrib.actordoc']
 
@@ -70,12 +70,12 @@ html_title = u"John's developer blog"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = 'logo.png'
+# html_logo = 'logo.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = 'favicon.ico'
+# html_favicon = 'favicon.ico'
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -95,11 +95,10 @@ if lino:
 autosummary_generate = True
 
 # http://sphinx.pocoo.org/theming.html
-html_theme = "default"
+# html_theme = "classic"
+# html_theme_options = dict(collapsiblesidebar=True, externalrefs=True)
 
-html_theme_options = dict(collapsiblesidebar=True, externalrefs=True)
 
-
-def setup(app):
-    app.add_stylesheet('centeredlogo.css')
+# def setup(app):
+#     app.add_stylesheet('centeredlogo.css')
 
