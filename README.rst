@@ -65,7 +65,7 @@ is to be published.
     env.blogref_url = "http://www.doe.org"
 
   More about this in the `atelier documentation
-  <http://atelier.lino-framework.org/dev/api/atelier.fablib.html#configuration-files>`_.
+  <http://atelier.lino-framework.org/api/atelier.fablib.html#configuration-files>`_.
 
 - And then you must configure the web server at `doe.org` to serve
   `/home/john/public_html/blog_docs` to the outside.  For example if
