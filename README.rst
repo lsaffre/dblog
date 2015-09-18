@@ -3,8 +3,9 @@ README
 ======
 
 This is a project template for getting started with Luc's developer
-blog. See also `Start your own developer blog
-<http://noi.lino-framework.org/team/devblog.html>`_.
+blog. See `Start your own developer blog
+<http://noi.lino-framework.org/team/devblog.html>`_ for an
+introducton.
 
 Installation:
 
@@ -45,7 +46,7 @@ To build your docs and see them::
 
     $ cd ~/projects/blog
     $ fab bd
-    $ firefox .build/index.html
+    $ firefox docs/.build/index.html
 
 To publish your docs::
 
