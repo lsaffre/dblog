@@ -3,7 +3,8 @@ README
 ======
 
 This is a project template for getting started with Luc's developer
-blog.
+blog. See also `Start your own developer blog
+<http://noi.lino-framework.org/team/devblog.html>`_.
 
 Installation:
 
@@ -20,8 +21,9 @@ Installation:
   command.  This is your *internal project name*. It is not visible to
   the outside. Don't use "dblog" because one day you might become
   maintainer of the project template itself (whose internal name would
-  then be "dblog").  See also `Project management using atelier
-  <http://lino-framework.org/team/projects.html>`_.
+  then be "dblog").  See `Project management using atelier
+  <http://noi.lino-framework.org/team/projects.html>`_ for more
+  details.
 
 - Install the ``atelier`` Python package::  
 
