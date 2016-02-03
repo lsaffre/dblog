@@ -35,40 +35,42 @@ Installation:
   - `~/projects/blog/docs/conf.py`
   - `~/projects/blog/docs/index.rst`
 
-- Make sure that your `VISUAL` or `EDITOR` environment variable is set.
+- Create a file :file:`~/.fabricrc` with this content::
+
+    blog_root = /home/johndoe/projects/blog/docs
+    blogref_url = http://johndoe.lino-framework.org
+    docs_rsync_dest = johndoe@lino-framework.org:~/public_html/%s
+    editor_command = vim
+    # editor_command = emacsclient -n
+    # editor_command = /path/to/pycharm-community-3.4.1/bin/pycharm.sh
+
 
 To start blogging::
 
     $ cd ~/projects/blog
     $ fab blog
 
-To build your docs and see them::
+To build your docs::
 
-    $ cd ~/projects/blog
     $ fab bd
+
+To see your built doctree::
+
     $ firefox docs/.build/index.html
 
 To publish your docs::
 
-    $ cd ~/projects/blog
     $ fab pd
 
 Before this last step can work, you need to configure where your blog
-is to be published.
+is to be published. 
 
-- you need an SSH account on some public server. For example
-  `john@doe.org`.
+You need an SSH account on some public server. For example
+`john@doe.org`.  And that web server must be configured to serve
+`/home/john/public_html/blog_docs` to the outside.  For example if
+you want your blog to be visible under `http://www.doe.org` you
+point your browser's "/" location to `public_html/blog_docs`.
 
-- Modify the file `~/projects/blog/fabfile.py`, adding this content::
-
-    env.docs_rsync_dest = 'john@doe.org:~/public_html/%s'
-    env.blogref_url = "http://www.doe.org"
-
-  More about this in the `atelier documentation
-  <http://atelier.lino-framework.org/api/atelier.fablib.html#configuration-files>`_.
-
-- And then you must configure the web server at `doe.org` to serve
-  `/home/john/public_html/blog_docs` to the outside.  For example if
-  you want your blog to be visible under `http://www.doe.org` you
-  point your browser's "/" location to `public_html/blog_docs`.
+As a Lino contributor you'll get a free account on
+`lino-framework.org`, just ask for it.
 
