@@ -16,7 +16,7 @@ Installation:
     $ git clone https://github.com/lsaffre/dblog.git blog
 
   This will create a directory `~/projects/blog` with all necessary
-  files.
+  files. On the Linux command line ``~`` is shorthand for your home directory.
 
   Note that we explicitly specified the argument "blog" to the ``git``
   command.  This is your *internal project name*. It is not visible to
@@ -32,17 +32,20 @@ Installation:
 
 - Edit the following files (replace at least "John Doe" by your name):
 
-  - `~/projects/blog/docs/conf.py`
-  - `~/projects/blog/docs/index.rst`
+  - ``~/projects/blog/docs/conf.py``
+  - ``~/projects/blog/docs/index.rst``
 
-- Create a file :file:`~/.fabricrc` with this content::
+- Create a file named ``~/.fabricrc`` with this content::
 
-    blog_root = /home/johndoe/projects/blog/docs
+    blog_root = /home/john/projects/blog/docs
     blogref_url = http://johndoe.lino-framework.org
     docs_rsync_dest = johndoe@lino-framework.org:~/public_html/%s
     editor_command = vim
     # editor_command = emacsclient -n
     # editor_command = /path/to/pycharm-community-3.4.1/bin/pycharm.sh
+
+  Replacing ``john`` by your local username, ``johndoe`` by the name
+  of your SSH account.
 
 
 To start blogging::
