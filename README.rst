@@ -32,13 +32,14 @@ Installation:
 
   If this fails due to a denied permission, then you must either
   prefix it with `sudo <https://en.wikipedia.org/wiki/Sudo>`_ to run
-  it as root user (and to have it installed system-wide)::
+  it as root user and to have it installed *system-wide*, i.e. for all
+  users of that computer::
 
     $ sudo pip install atelier
 
-  Or alternatively you must check or activate your `virtualenv
+  Or alternatively you must install, check or activate your
+  `virtualenv
   <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_.
-
 
 - Edit the following files (replace at least "John Doe" by your name):
 
