@@ -46,7 +46,9 @@ Installation:
   - ``~/projects/blog/docs/conf.py``
   - ``~/projects/blog/docs/index.rst``
 
-- Create a file named ``~/.fabricrc`` with this content::
+- Create a file named ``~/.fabricrc`` with this content (replacing
+  ``john`` by your local username, ``johndoe`` by the name of your SSH
+  account)::
 
     blog_root = /home/john/projects/blog/docs
     blogref_url = http://johndoe.lino-framework.org
@@ -54,9 +56,6 @@ Installation:
     editor_command = vim
     # editor_command = emacsclient -n
     # editor_command = /path/to/pycharm-community-3.4.1/bin/pycharm.sh
-
-  Replacing ``john`` by your local username, ``johndoe`` by the name
-  of your SSH account.
 
 
 To start blogging::
