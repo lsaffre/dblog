@@ -30,6 +30,16 @@ Installation:
 
     $ pip install atelier
 
+  If this fails due to a denied permission, then you must either
+  prefix it with `sudo <https://en.wikipedia.org/wiki/Sudo>`_ to run
+  it as root user (and to have it installed system-wide)::
+
+    $ sudo pip install atelier
+
+  Or alternatively you must check or activate your `virtualenv
+  <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_.
+
+
 - Edit the following files (replace at least "John Doe" by your name):
 
   - ``~/projects/blog/docs/conf.py``
