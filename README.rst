@@ -2,9 +2,9 @@
 README
 ======
 
-This is a project template for getting started with Luc's developer
-blog. See `Start your own developer blog
-<http://noi.lino-framework.org/team/devblog.html>`_ for an
+This is a project template for getting started with your developer
+blog.  See `Start your own developer blog
+<http://www.lino-framework.org/team/devblog.html>`_ for an
 introducton.
 
 Installation:
@@ -16,56 +16,49 @@ Installation:
     $ git clone https://github.com/lsaffre/dblog.git blog
 
   This will create a directory `~/projects/blog` with all necessary
-  files. On the Linux command line ``~`` is shorthand for your home directory.
+  files. On the Linux command line ``~`` is shorthand for your home
+  directory.
 
   Note that we explicitly specified the argument "blog" to the ``git``
-  command.  This is your *internal project name*. It is not visible to
-  the outside. Don't use "dblog" because one day you might become
-  maintainer of the project template itself (whose internal name would
-  then be "dblog").  See `Project management using atelier
-  <http://noi.lino-framework.org/team/projects.html>`_ for more
-  details.
+  command.  This is your *local project name*. It is not visible to
+  the outside.  Without that argument, ``git`` would use `dblog` as
+  local project name. Which would be suboptimal because one day you
+  might become maintainer of the project template itself (whose
+  internal name would then be "dblog").  See `Project management using
+  atelier <http://www.lino-framework.org/team/projects.html>`_ for
+  more details.
 
-- Install the ``atelier`` Python package::  
+  Activate your `virtualenv
+  <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_ and
+  install the ``atelier`` Python package::
 
     $ pip install atelier
-
-  If this fails due to a denied permission, then you must either
-  prefix it with `sudo <https://en.wikipedia.org/wiki/Sudo>`_ to run
-  it as root user and to have it installed *system-wide*, i.e. for all
-  users of that computer::
-
-    $ sudo pip install atelier
-
-  Or alternatively you must install, check or activate your
-  `virtualenv
-  <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_.
 
 - Edit the following files (replace at least "John Doe" by your name):
 
   - ``~/projects/blog/docs/conf.py``
   - ``~/projects/blog/docs/index.rst``
 
-- Create a file named ``~/.fabricrc`` with this content (replacing
-  ``john`` by your local username, ``johndoe`` by the name of your SSH
-  account)::
+- Create a file named ``~/.invoke.py`` with the following content
+  (replacing ``john`` by your local username, ``johndoe`` by the name
+  of your SSH account)::
 
-    blog_root = /home/john/projects/blog/docs
-    blogref_url = http://johndoe.lino-framework.org
-    docs_rsync_dest = johndoe@lino-framework.org:~/public_html/%s
-    editor_command = vim
-    # editor_command = emacsclient -n
-    # editor_command = /path/to/pycharm-community-3.4.1/bin/pycharm.sh
+    blog_root = '/home/john/projects/blog/docs'
+    blogref_url = 'http://johndoe.lino-framework.org'
+    docs_rsync_dest = 'johndoe@lino-framework.org:~/public_html/%s'
+    editor_command = 'vim'
+    # editor_command = 'emacsclient -n'
+    # editor_command = '/path/to/pycharm/bin/pycharm.sh'
 
 
 To start blogging::
 
     $ cd ~/projects/blog
-    $ fab blog
+    $ inv blog
 
 To build your docs::
 
-    $ fab bd
+    $ inv bd
 
 To see your built doctree::
 
@@ -73,7 +66,7 @@ To see your built doctree::
 
 To publish your docs::
 
-    $ fab pd
+    $ inv pd
 
 Before this last step can work, you need to configure where your blog
 is to be published. 
