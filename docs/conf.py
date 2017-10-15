@@ -20,6 +20,7 @@ extensions += ['atelier.sphinxconf.blog']
 extensions += ['atelier.sphinxconf.complex_tables']
 
 if False:
+    extensions += ['lino.sphinxcontrib.base']
     extensions += ['lino.sphinxcontrib.logo']
     extensions += ['lino.sphinxcontrib.actordoc']
 
