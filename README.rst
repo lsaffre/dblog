@@ -4,7 +4,7 @@ README
 
 This is a project template for getting started with your developer
 blog.  See `Start your own developer blog
-<http://www.lino-framework.org/team/devblog.html>`_ for an
+<http://www.lino-framework.org/dev/devblog.html>`_ for an
 introducton.
 
 Installation:
@@ -19,14 +19,13 @@ Installation:
   files. On the Linux command line ``~`` is shorthand for your home
   directory.
 
-  Note that we explicitly specified the argument "blog" to the ``git``
-  command.  This is your *local project name*. It is not visible to
+  Note that we explicitly specified your *local project name* "blog"
+  as an argument to the ``git`` command.  This name is not visible to
   the outside.  Without that argument, ``git`` would use `dblog` as
-  local project name. Which would be suboptimal because one day you
-  might become maintainer of the project template itself (whose
-  internal name would then be "dblog").  See `Project management using
-  atelier <http://www.lino-framework.org/team/projects.html>`_ for
-  more details.
+  local project name, which would be suboptimal since "dblog" is just
+  the name of this template project.  See `Setting up your work
+  environment <http://www.lino-framework.org/dev/env.html>`_ for more
+  details.
 
   Activate your `virtualenv
   <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_ and
@@ -34,14 +33,15 @@ Installation:
 
     $ pip install atelier
 
-- Edit the following files (replace at least "John Doe" by your name):
+- Edit the following files and replace at least "John Doe" by your
+  name:
 
   - ``~/projects/blog/docs/conf.py``
   - ``~/projects/blog/docs/index.rst``
 
-- Create a file named ``~/.invoke.py`` with the following content
-  (replacing ``john`` by your local username, ``johndoe`` by the name
-  of your SSH account)::
+- Create a file named :xfile:`.invoke.py` in your home directory with
+  the following content (replacing ``john`` by your local username,
+  ``johndoe`` by the name of your SSH account)::
 
     blog_root = '/home/john/projects/blog/docs'
     blogref_url = 'http://johndoe.lino-framework.org'
@@ -56,7 +56,7 @@ To start blogging::
     $ cd ~/projects/blog
     $ inv blog
 
-To build your docs::
+To build your docs locally::
 
     $ inv bd
 
