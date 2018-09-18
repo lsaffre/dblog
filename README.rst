@@ -39,8 +39,8 @@ Installation:
   - ``~/projects/blog/docs/conf.py``
   - ``~/projects/blog/docs/index.rst``
 
-- Create a file named :file:`.invoke.py` in your home directory with
-  the following content (replacing ``john`` by your local username,
+- Create a file named ``.invoke.py`` in your home directory with the
+  following content (replacing ``john`` by your local username,
   ``johndoe`` by the name of your SSH account)::
 
     blog_root = '/home/john/projects/blog/docs'
