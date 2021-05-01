@@ -80,9 +80,9 @@ html_sidebars = {
 }
 
 
-if lino:
-    extlinks.update(srcref=(lino.srcref_url, ''))
-    # extlinks.update(ticket=('http://trac.lino-framework.org/ticket/%s', '#'))
+# if lino:
+#     extlinks.update(srcref=(lino.srcref_url, ''))
+#     # extlinks.update(ticket=('http://trac.lino-framework.org/ticket/%s', '#'))
 
 autosummary_generate = True
 
