@@ -2,7 +2,7 @@
 #
 # Sphinx documentation build configuration file
 
-from atelier.sphinxconf import configure
+from rstgen.sphinxconf import configure
 
 try:
     import lino
@@ -16,8 +16,8 @@ configure(globals())
 
 language = 'en'
 
-extensions += ['atelier.sphinxconf.blog']
-extensions += ['atelier.sphinxconf.complex_tables']
+extensions += ['rstgen.sphinxconf.blog']
+extensions += ['rstgen.sphinxconf.complex_tables']
 
 if False:
     extensions += ['lino.sphinxcontrib.base']
