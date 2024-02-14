@@ -48,10 +48,8 @@ exclude_patterns = [
     'include/*',
 ]
 
-
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
-
 
 html_style = 'default.css'
 
@@ -79,7 +77,6 @@ html_sidebars = {
     '**': ['globaltoc.html', 'searchbox.html', 'links.html'],
 }
 
-
 # if lino:
 #     extlinks.update(srcref=(lino.srcref_url, ''))
 #     # extlinks.update(ticket=('http://trac.lino-framework.org/ticket/%s', '#'))
@@ -89,7 +86,6 @@ autosummary_generate = True
 # http://sphinx.pocoo.org/theming.html
 # html_theme = "classic"
 # html_theme_options = dict(collapsiblesidebar=True, externalrefs=True)
-
 
 # def setup(app):
 #     app.add_stylesheet('centeredlogo.css')
