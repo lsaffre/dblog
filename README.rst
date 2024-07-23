@@ -62,14 +62,14 @@ To build your docs locally::
 
 To see your built doctree::
 
-    $ firefox docs/.build/index.html
+    $ python -m webbrowser docs/.build/index.html
 
 To publish your docs::
 
     $ inv pd
 
 Before this last step can work, you need to configure where your blog
-is to be published. 
+is to be published.
 
 You need an SSH account on some public server. For example
 `john@doe.org`.  And that web server must be configured to serve
@@ -79,4 +79,3 @@ point your browser's "/" location to `public_html/blog_docs`.
 
 As a Lino contributor you'll get a free account on
 `lino-framework.org`, just ask for it.
-
